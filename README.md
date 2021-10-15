@@ -1,3 +1,5 @@
+## DEVOPS LAB 5
+
 # User API web application
 
 It is a basic NodeJS web application exposing REST API that creates and stores user parameters in [Redis database](https://redis.io/).
@@ -64,5 +66,6 @@ npm test
 
 ## Author
 
-Sergei Kudinov   
-sergei@adaltas.com
+Raphael GROBON
+Thibault PEETERS 
+Valent MALOMOSKI
