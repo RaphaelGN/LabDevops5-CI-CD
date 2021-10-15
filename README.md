@@ -1,84 +1,71 @@
 ## DEVOPS LAB 5
 Continuous Integration & Continuous Delivery (Deployment) (CI/CD)
-# Objectives
+# Lab
 
-Part 1. Continuous Integration with GitHub Actions
-Part 2. Continuous Delivery (Deployment) with Heroku
+Continuous Integration & Continuous Delivery (Deployment) (CI/CD)
 
+## Objectives
 
-
-
-
-
+1. Part 1. Continuous Integration with GitHub Actions
+2. Part 2. Continuous Delivery (Deployment) with Heroku
 
 
+## Part 1. Continuous Integration with GitHub Actions
 
+Before starting configuring CI, you need to have a repository on GitHub. Let's create it for the project from Part 1:
 
+- Create a Git repository for the User API project from **Part 1** and commit all the files. 
+- Create a remote repository on GitHub, link it with the local one, and push the changes.
 
+1. Read the [introduction to GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions).
 
-# User API web application
+2. Create a CI workflow for the Node.js using this [documentation](https://docs.github.com/en/actions/guides/building-and-testing-nodejs). 
 
-It is a basic NodeJS web application exposing REST API that creates and stores user parameters in [Redis database](https://redis.io/).
+> Note. Don't forget to commit and push your workflow configuration in the `.github/workflows` folder.
 
-## Functionality
+Does your workflow work? Is there any problem with the connection to Redis?
 
-1. Start a web server
-2. Create a user
+3. Improve your Workflow to connect Node.js application to Redis using this documentation:
+  - [About service containers](https://docs.github.com/en/actions/guides/about-service-containers)
+  - [Creating Redis service containers](https://docs.github.com/en/actions/guides/creating-redis-service-containers)
 
-## Installation
+4. Practice a regular workflow of the software development life cycle. 
 
-This application is written on NodeJS and it uses Redis database.
+Create a pull request to the `master` branch:
 
-1. [Install NodeJS](https://nodejs.org/en/download/)
+- create a new branch and publish it to your remote GitHub repository
+- make any change in your source code, commit and push it
+- make a **Pull Request** on GitHub
+- wait for GitHub Actions to test it (observe the process on GitHub -> Actions page)
+- review the commit and Merge this Pull Request into the `master` branch
 
-2. [Install Redis](https://redis.io/download)
+5. Explore the GitHub Actions log on GitHub (under the "Actions" tab).
 
-3. Install application
+## Part 2. Continuous Delivery (Deployment) with Heroku
 
-Go to the root directory of the application (where `package.json` file located) and run:
+1. Create an account on [Heroku](https://heroku.com)
 
-```
-npm install 
-```
+2. Create an app on [Heroku](https://dashboard.heroku.com/new-app) and configure it.
 
-## Usage
+Under the "Deploy tab" do:
 
-1. Start a web server
+  - sync the app with the GitHub repository
+  - enable the option "Automatic deploys / Wait for CI to pass before deploy"
 
-From the root directory of the project run:
+3. Add Redis service to Heroku deployment - https://elements.heroku.com/addons/heroku-redis
 
-```
-npm start
-```
+> Note. Redis service on Heroku is free, but it requires adding credit card information. Considering this limitation we will not run Redis on Heroku, and the application will be partially non-functional (it will print the "Hello world!" message on the home page, but the user API will not work). However, it will be enough to experience our CI/CD pipeline.
 
-It will start a web server available in your browser at http://localhost:3000.
+4. Configure the workflow to deploy to Heroku using [this guide](https://github.com/marketplace/actions/deploy-to-heroku).
 
-2. Create a user
+5. Practice a regular workflow of the software development life cycle like in Part 2.
 
-Send a POST (REST protocol) request using terminal:
+6. Test your public domain on Heroku.
 
-```bash
-curl --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"username":"sergkudinov","firstname":"sergei","lastname":"kudinov"}' \
-  http://localhost:3000/user
-```
+## Bonus tasks
 
-It will output:
+1. Integrate Swagger UI using this package - https://www.npmjs.com/package/express-swagger-generator
 
-```
-{"status":"success","msg":"OK"}
-```
-
-Another way to test your REST API is to use [Postman](https://www.postman.com/).
-
-## Testing
-
-From the root directory of the project, run:
-
-```
-npm test
-```
 
 ## Author
 
