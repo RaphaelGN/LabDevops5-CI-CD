@@ -14,12 +14,12 @@ Continuous Integration & Continuous Delivery (Deployment) (CI/CD)
 
 Before starting configuring CI, you need to have a repository on GitHub. Let's create it for the project from Part 1:
 
-- Create a Git repository for the User API project from **Part 1** and commit all the files. 
+- Create a Git repository for the User API project from **Part 1** and commit all the files.
 - Create a remote repository on GitHub, link it with the local one, and push the changes.
 
 1. Read the [introduction to GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions).
 
-2. Create a CI workflow for the Node.js using this [documentation](https://docs.github.com/en/actions/guides/building-and-testing-nodejs). 
+2. Create a CI workflow for the Node.js using this [documentation](https://docs.github.com/en/actions/guides/building-and-testing-nodejs).
 
 > Note. Don't forget to commit and push your workflow configuration in the `.github/workflows` folder.
 
@@ -29,7 +29,7 @@ Does your workflow work? Is there any problem with the connection to Redis?
   - [About service containers](https://docs.github.com/en/actions/guides/about-service-containers)
   - [Creating Redis service containers](https://docs.github.com/en/actions/guides/creating-redis-service-containers)
 
-4. Practice a regular workflow of the software development life cycle. 
+4. Practice a regular workflow of the software development life cycle.
 
 Create a pull request to the `master` branch:
 
@@ -70,5 +70,5 @@ Under the "Deploy tab" do:
 ## Author
 
 Raphael GROBON
-Thibault PEETERS 
+Thibault PEETERS
 Valent MALOMOSKI
