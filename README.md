@@ -1,5 +1,7 @@
 ## DEVOPS LAB 5
+
 Continuous Integration & Continuous Delivery (Deployment) (CI/CD)
+
 # Lab
 
 Continuous Integration & Continuous Delivery (Deployment) (CI/CD)
@@ -8,7 +10,6 @@ Continuous Integration & Continuous Delivery (Deployment) (CI/CD)
 
 1. Part 1. Continuous Integration with GitHub Actions
 2. Part 2. Continuous Delivery (Deployment) with Heroku
-
 
 ## Part 1. Continuous Integration with GitHub Actions
 
@@ -26,8 +27,9 @@ Before starting configuring CI, you need to have a repository on GitHub. Let's c
 Does your workflow work? Is there any problem with the connection to Redis?
 
 3. Improve your Workflow to connect Node.js application to Redis using this documentation:
-  - [About service containers](https://docs.github.com/en/actions/guides/about-service-containers)
-  - [Creating Redis service containers](https://docs.github.com/en/actions/guides/creating-redis-service-containers)
+
+- [About service containers](https://docs.github.com/en/actions/guides/about-service-containers)
+- [Creating Redis service containers](https://docs.github.com/en/actions/guides/creating-redis-service-containers)
 
 4. Practice a regular workflow of the software development life cycle.
 
@@ -49,8 +51,8 @@ Create a pull request to the `master` branch:
 
 Under the "Deploy tab" do:
 
-  - sync the app with the GitHub repository
-  - enable the option "Automatic deploys / Wait for CI to pass before deploy"
+- sync the app with the GitHub repository
+- enable the option "Automatic deploys / Wait for CI to pass before deploy"
 
 3. Add Redis service to Heroku deployment - https://elements.heroku.com/addons/heroku-redis
 
@@ -66,9 +68,8 @@ Under the "Deploy tab" do:
 
 1. Integrate Swagger UI using this package - https://www.npmjs.com/package/express-swagger-generator
 
-
 ## Author
 
-Raphael GROBON
-Thibault PEETERS
+Raphael GROBON  
+Thibault PEETERS  
 Valent MALOMOSKI
